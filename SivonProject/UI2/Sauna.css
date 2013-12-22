@@ -1,0 +1,16 @@
+
+#SaunaWin {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 780px;
+	height: 365px;
+	padding: 0px;
+	border: 0px solid #aaaaaa;
+	box-shadow: 0px 0px 0px #888888;
+	background-image: url(Pic/Sauna/sauna.jpg);
+	background-size: 780px 365px;
+}
+
+
+

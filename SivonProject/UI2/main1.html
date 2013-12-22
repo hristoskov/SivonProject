@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no,width=device-width,height=device-height">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<link rel="stylesheet" type="text/css" href="main1.css" />
+</head>
+<body align="center">
+	<div id="MainWin" align="center">
+
+			
+			<div   style="position: absolute; bottom: 40px; left: 60px;" onclick="open_winSauna();">
+				<span style="position: absolute; top: 2px; left: 11px;" ><font size="6">Sauna</font></span>
+				<img src="Pic/button_Yellow.png" width="170" height="40" id="ButonSauna">
+				
+			</div>
+			
+
+			<div style="position: absolute; top: 180px; left: 0px; height: 100px; width: 280px; " align="center">
+				<span ID="MeasureTempSauna" ><font style="font-size:70px" color="red">59.2</font></span>
+				<span><font style="font-size:70px" color="red">*C</font></span>
+			</div>
+
+
+			<div   style="position: absolute; bottom: 40px; left: 320px;" onclick="open_winSteamBath();">
+				<span style="position: absolute; top: 2px; left: 11px;" ><font size="6">Steam Bath</font></span>
+				<img src="Pic/button_Yellow.png" width="170" height="40" id="ButonSteamBath">
+				
+			</div>
+
+			<div style="position: absolute; top: 180px; left: 270px; height: 100px; width: 280px; " align="center">
+				<span ID="MeasureTempSteamBath" ><font style="font-size:70px" color="red">58.2</font></span>
+				<span><font style="font-size:70px" color="red">*C</font></span>
+			</div>
+			
+
+			
+			<div   style="position: absolute; bottom: 40px; left: 580px;" onclick="open_winBench();" >
+				<span style="position: absolute; top: 2px;left: 30px; " ><font size="6">Bench</font></span>
+				<img src="Pic/button_Yellow.png" width="170" height="40" id="ButonSteamBath">
+				
+			</div>
+			
+
+			<div style="position: absolute; top: 180px; left: 520px; height: 100px; width: 280px; " align="center">
+				<span ID="MeasureTempBench" ><font style="font-size:70px" color="red">57.2</font></span>
+				<span><font style="font-size:70px" color="red">*C</font></span>
+			</div>
+			
+			<div  id="attention" style="position: absolute; left: 40px; top: 50px; height: 90px;">
+				<img src="Pic\attention.gif" width="80" height="70">
+			</div>
+
+
+
+	</div>
+	
+
+	
+	<script type="text/javascript" src="main1.js"></script>
+	
+	
+	
+</body>
+
+<script type="text/javascript" src="UIData.js"></script>
+<script type="text/javascript" src="WebSock.js"></script>
+</html>

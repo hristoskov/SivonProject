@@ -1,0 +1,237 @@
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<script>   
+
+	var TimeArray = new Array();
+	var PowerArray = new Array();
+	var Price;
+	
+	
+	TimeArray[0] = 10;
+	TimeArray[1] = 11;
+	TimeArray[2] = 12;
+	TimeArray[3] = 13;
+	TimeArray[4] = 14;
+	TimeArray[5] = 15;
+	TimeArray[6] = 16;
+	
+	
+	function change() {
+	
+	var totalKw=0;
+	var totalCons=0;
+	
+	var el = document.getElementById('Cell81');
+	Price = el.value;	
+	
+	var el1 = document.getElementById('Cell11');
+	el1.innerHTML = TimeArray[0] ;
+	var el2 = document.getElementById('Cell12');
+	PowerArray[0] = el2.value;
+	var el3  = document.getElementById('Cell13');
+	el3.innerHTML = PowerArray[0] * TimeArray[0];
+	totalKw=totalKw + PowerArray[0] * TimeArray[0];
+	var el4  = document.getElementById('Cell14');
+	el4.innerHTML = PowerArray[0] * TimeArray[0] * Price ;
+	totalCons=totalCons + PowerArray[0] * TimeArray[0] * Price;
+	
+	el1 = document.getElementById('Cell21');
+	el1.innerHTML = TimeArray[1] ;
+	el2 = document.getElementById('Cell22');
+	PowerArray[1] = el2.value;
+	el3  = document.getElementById('Cell23');
+	el3.innerHTML = PowerArray[1] * TimeArray[1];
+	totalKw=totalKw + PowerArray[1] * TimeArray[1];
+	el4  = document.getElementById('Cell24');
+	el4.innerHTML = PowerArray[1] * TimeArray[1] * Price ;
+	totalCons=totalCons + PowerArray[1] * TimeArray[1] * Price;
+	
+	el1 = document.getElementById('Cell31');
+	el1.innerHTML = TimeArray[2] ;
+	el2 = document.getElementById('Cell32');
+	PowerArray[2] = el2.value;
+	el3  = document.getElementById('Cell33');
+	el3.innerHTML = PowerArray[2] * TimeArray[2];
+	totalKw=totalKw + PowerArray[2] * TimeArray[2];
+	el4  = document.getElementById('Cell34');
+	el4.innerHTML = PowerArray[2] * TimeArray[2] * Price ;
+	totalCons=totalCons + PowerArray[2] * TimeArray[2] * Price;
+		
+	el1 = document.getElementById('Cell41');
+	el1.innerHTML = TimeArray[3] ;
+	el2 = document.getElementById('Cell42');
+	PowerArray[3] = el2.value;
+	el3  = document.getElementById('Cell43');
+	el3.innerHTML = PowerArray[3] * TimeArray[3];
+	totalKw=totalKw + PowerArray[3] * TimeArray[3];
+	el4  = document.getElementById('Cell44');
+	el4.innerHTML = PowerArray[3] * TimeArray[3] * Price ;
+	totalCons=totalCons + PowerArray[3] * TimeArray[3] * Price;
+	
+	el1 = document.getElementById('Cell51');
+	el1.innerHTML = TimeArray[4] ;
+	el2 = document.getElementById('Cell52');
+	PowerArray[4] = el2.value;
+	el3  = document.getElementById('Cell53');
+	el3.innerHTML = PowerArray[4] * TimeArray[4];
+	totalKw=totalKw + PowerArray[4] * TimeArray[4];
+	el4  = document.getElementById('Cell54');
+	el4.innerHTML = PowerArray[4] * TimeArray[4] * Price ;
+	totalCons=totalCons + PowerArray[4] * TimeArray[4] * Price;
+		
+	el1 = document.getElementById('Cell61');
+	el1.innerHTML = TimeArray[5] ;
+	el2 = document.getElementById('Cell62');
+	PowerArray[5] = el2.value;
+	el3  = document.getElementById('Cell63');
+	el3.innerHTML = PowerArray[5] * TimeArray[5];
+	totalKw=totalKw + PowerArray[5] * TimeArray[5];
+	el4  = document.getElementById('Cell64');
+	el4.innerHTML = PowerArray[5] * TimeArray[5] * Price ;
+	totalCons=totalCons + PowerArray[5] * TimeArray[5] * Price;
+
+	el3  = document.getElementById('Cell73');
+	el3.innerHTML = totalKw;
+	el4  = document.getElementById('Cell74');
+	el4.innerHTML = totalCons ;
+
+	
+	
+	
+	}
+</script>
+
+<script type="text/javascript" src="calendarDateInput.js">
+/***********************************************
+* Jason's Date Input Calendar- By Jason Moon http://calendar.moonscript.com/dateinput.cfm
+* Script featured on and available at http://www.dynamicdrive.com
+* Keep this notice intact for use.
+***********************************************/
+</script>
+
+
+</head>
+
+<body>
+
+	
+
+<div style="position: absolute; top: 30px; right: 0px;">
+<table border="1" style="margin-top:15px; margin-left:0px;" >
+  <colgroup width="120">
+  <colgroup width="120">
+  <colgroup width="120">
+  <colgroup width="120">
+  <colgroup width="120">
+  <tr>
+    <th  ></th>
+    <th  >Time</th>
+	<th  >Power</th>
+	<th  >kw/h</th>
+	<th  >Consumation</th>
+  </tr>
+  
+  <tr>
+    <td >Steam</td>
+    <td  id="Cell11" align="right" >0</td>
+	<td  bgcolor="yellow" > <input type="number" id="Cell12" ></td>
+	<td  id="Cell13" align="right" >0</td>
+	<td  id="Cell14" align="right" >0</td>
+  </tr>
+  
+  <tr>
+    <td>Pump</td>
+    <td id="Cell21" align="right"  >0</td>
+	<td bgcolor="yellow" > <input type="number" id="Cell22"></td>
+	<td id="Cell23" align="right" >0</td>
+	<td id="Cell24" align="right" >0</td>
+  </tr>
+  
+  <tr>
+    <td>Benches</td>
+    <td id="Cell31" align="right" >0</td>
+	<td bgcolor="yellow" > <input type="number" id="Cell32"></td>
+	<td id="Cell33" align="right" >0</td>
+	<td id="Cell34" align="right" >0</td>
+  </tr>
+  
+  <tr>
+    <td>Fan</td>
+    <td id="Cell41" align="right" >0</td>
+	<td bgcolor="yellow" > <input type="number" id="Cell42"></td>
+	<td id="Cell43" align="right" >0</td>
+	<td id="Cell44" align="right" >0</td>
+  </tr>
+
+  <tr>
+    <td>light</td>
+    <td id="Cell51" align="right" >0</td>
+	<td bgcolor="yellow" > <input type="number" id="Cell52"></td>
+	<td id="Cell53" align="right" >0</td>
+	<td id="Cell54" align="right" >0</td>
+  </tr>
+  
+  <tr>
+    <td>fountain</td>
+    <td id="Cell61" align="right" >0</td>
+	<td bgcolor="yellow" > <input type="number" id="Cell62"></td>
+	<td id="Cell63" align="right" >0</td>
+	<td id="Cell64" align="right" >0</td>
+  </tr> 
+  
+  <tr>
+    <td>Price</td>
+    <td bgcolor="red" > <input type="number" id="Cell81" ></td>
+	<td>Total</td>
+	<td id="Cell73" align="right" >0</td>
+	<td id="Cell74" align="right" >0</td>
+  </tr> 
+
+  
+</table>
+</div>
+<div style="position: absolute; top: 10px; left: 10px; width: 600px; height: 20px; ">
+
+		<div style="position: absolute; top: 0px; left: 1px;">
+			<span >
+				<font size="6">From:</font>
+			</span>
+		</div>
+	
+		<div  style="position: absolute; top: 50px; left: 90px;">
+			<div style="position: absolute; bottom: 0px; left: 0px;">
+				<form>
+					<script>DateInput('orderdate', true, 'DD-MON-YYYY')</script>
+					<!--input type="button" onClick="alert(this.form.orderdate.value)" value="Show date value passed"-->
+				</form>
+			</div>
+		</div>
+		
+		<div style="position: absolute; top: 0px; left: 270px;">
+			<span >
+				<font size="6">To:</font>
+			</span>
+		</div>
+		
+		<div  style="position: absolute; top: 50px; left: 315px;">
+			<div style="position: absolute; bottom: 0px; left: 0px;">
+				<form>
+					<script>DateInput('orderdate', true, 'DD-MON-YYYY')</script>
+					<input type="button" onClick="alert(this.form.orderdate.value)" value="Show date value passed">
+				</form>
+			</div>
+		</div>
+		
+		<div style="position: absolute; top: 5px; left: 500px;" 
+		onclick="change();">
+			<span style="position: absolute; top: 2px; left: 11px;" ><font size="5">Calculate</font></span>
+			<img src="Pic/Sauna/button_Yellow.png" width="120" height="30" >
+		</div>
+		
+	</div>
+
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+
+
+#MainWin {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 780px;
+	height: 370px;
+	padding: 0px;
+	background-image: url(Pic/SnowPic.jpg);
+	background-size: 780px 370px;
+}
+
+
+

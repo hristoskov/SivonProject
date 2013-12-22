@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no,width=device-width,height=device-height">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<link rel="stylesheet" type="text/css" href="Sauna.css" />
+</head>
+<body align="center">
+	<div id="SaunaWin" align="center">
+	
+			
+	
+			<div style="position: absolute;top: 0px;left: 0px;width: 780px;height: 365px;" 
+			align="center" onmouseup="javasript:showSaunaElements();">
+			</div>	
+			
+			
+			
+			<div  id='SaunaMainLigtPicLeft' style="position: absolute; top: 40px; left: 30px;" onmouseup="javasript:showSaunaElements();">
+				<span style="position: absolute; top: 2px; left: 11px;" >SaunaMainLigtPicLeft</span>
+				<img src="Pic/Sauna/button_Yellow.png" width="200" height="40" >
+			</div>			
+			
+			<div  id='SaunaMainLigtPicRight' style="position: absolute; top: 40px; right: 30px;" onmouseup="javasript:showSaunaElements();">
+				<span style="position: absolute; top: 2px; left: 11px;" >SaunaMainLigtPicRight</span>
+				<img src="Pic/Sauna/button_Yellow.png" width="200" height="40" >
+			</div>			
+						
+			<div  id='SaunaHeaterPic' style="position: absolute; bottom: 70px; left: 30px;" onmouseup="javasript:showSaunaElements();">
+				<span style="position: absolute; top: 2px; left: 11px;" >SaunaHeaterPic</span>
+				<img src="Pic/Sauna/button_Yellow.png" width="200" height="40" >
+			</div>			
+			
+						
+						
+
+			<div  id='elementSaunaButonBack' style="position: absolute; bottom: 10px; left: 60px;" onclick="open_winMain1();">
+				<span style="position: absolute; top: 2px; left: 11px;" ><font size="6">Back</font></span>
+				<img src="Pic/Sauna/button_Yellow.png" width="170" height="40" >
+			</div>
+			
+			<div  id='elementSaunaButonSetings' style="position: absolute; bottom: 10px; right: 180px;" 
+			onclick="openSaunaSetings();">
+				<span style="position: absolute; top: 2px; left: 11px;" ><font size="6">Setings</font></span>
+				<img src="Pic/Sauna/button_Yellow.png" width="100" height="40" >
+			</div>
+			
+
+
+			
+			<div  id='elementSaunaButonStartStop' style="position: absolute; bottom: 10px; left: 300px;" onclick="SaunaStartStop();">
+				<span style="position: absolute; top: 2px; left: 11px;" ><font size="6">Start</font></span>
+				<img src="Pic/Sauna/button_Yellow.png" width="170" height="40" >
+			</div>
+
+			<div  style="position: absolute; top: 80px; left: 250px; height: 100px; width: 280px; "
+			align="center" onmouseup="javasript:showSaunaElements();">
+				<span ID="SaunaMeasureTemp" ><font style="font-size:70px" color="red">59.2</font></span>
+				<span><font style="font-size:70px" color="red">*C</font></span>
+			</div>
+
+			<div id="elementSaunaMainLights" onmouseup="javasript:showSaunaElements();">
+				<div style="position: absolute; top: 175px; left: 5px; height: 20px; width: 270px;">
+					<img src="Pic/Sauna/Brightnes.png" width="270" height="40">
+				</div>
+				<div style="position: absolute; left: 2px; top: 187px; height: 30px; width: 270px;">
+					<input id="SaunaMainBright" type="range" style="width: 100%;" min="4" max="30" step="1" value="4"
+					onfocus="javascript:SetFlagNewSetPoint();" onchange="javascript:ui.SaunaSetMainlightValue(this.value);" >
+				</div>
+				<div style="position: absolute; top: 110px; left: 5px; height: 60px; width: 90px; border: 1px solid #aaaaaa;">
+					<div style="position: absolute; top: 0px; left: 0px; height: 25px; width: 100%;" align="center">
+						<span>Main Lights</span>
+					</div>
+					<div style="position: absolute; top: 30px; left: 20px; height: 25px; width: 50px; border: 1px solid #aaaaaa;"
+					align="center" onmouseup="javascript:ui.SaunaSetMainLight();">
+						<span id="SaunaMainLightOnOff">on/off</span>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div id="elementSaunaEffectLights" onmouseup="javasript:showSaunaElements();">
+				<div style="position: absolute; top: 110px; right: 5px; height: 90px; width: 90px;	border: 1px solid #aaaaaa;">
+				
+					<div style="position: absolute; top: 0px; left: 0px; height: 25px; width: 100%;" align="center">
+						<span>Effect Lights</span>
+					</div>
+					
+					<div style="position: absolute; top: 25px; left: 7px; height: 25px; width: 75px; border: 1px solid #aaaaaa;" 
+					align="center" onmouseup="javascript:ui.SaunaSetMixRGB();">
+						<span id="SaunaEffectMixOnOff" >mix</span>
+					</div>
+					
+					<div style="position: absolute; top: 60px; left: 20px; height: 25px; width: 50px; border: 1px solid #aaaaaa;"
+					align="center" onmouseup="javascript:ui.SaunaSetRGB();">
+						<span id="SaunaEffectOnOff">OFF</span>
+					</div>
+					
+				</div>
+				
+				<div style="position: absolute; top: 205px; right: 5px; height: 20px; width: 270px;">
+					<img src="Pic/Sauna/Brightnes.png" width="270" height="40">
+				</div>
+				
+				<div style="position: absolute; top: 213px; right: 15px; height: 30px; width: 270px;">
+					<input id="SaunaEffectBright" type="range" style="width: 100%;" min="0" max="20" step="1" value="0"
+					onfocus="javascript:SetFlagNewSetPoint();" onchange="javascript:ui.SaunaSetBrightnessValue(this.value);">
+				</div>	
+			</div>
+			
+			
+			<div id="elementSaunaEffectLightsSlider" onmouseup="javasript:showSaunaElements();">
+				<div style="position: absolute; top: 5px; left: 5px; height: 20px; width: 270px;">
+					<img src="Pic/Sauna/Rainbow.png" width="770" height="40">
+				</div>
+				<div style="position: absolute; top: 13px; left: 5px; height: 30px; width: 270px;">
+					<input id="SaunaEffectColor" type="range" style="width: 280%;" min="0" max="1529" step="1" value="0" 
+					onfocus="javascript:SetFlagNewSetPoint();" onchange="javascript:ui.SaunaSetRGBValues(this.value);">
+				</div>		
+			</div>
+			
+			<div id="elementSaunaLeftTime" style="position: absolute; top: 180px; left: 250px; height: 100px; width: 280px; "
+			align="center" onmouseup="javasript:showSaunaElements();">
+				<span id="SaunaLeftMinutes" ><font style="font-size:60px" color="blue">12</font></span>
+				<span id="SaunaLeftTimePoints"><font style="font-size:60px" color="blue">:</font></span>
+				<span id="SaunaLeftSecuods" ><font style="font-size:60px" color="blue">34</font></span>
+			</div>
+			
+			
+
+			<div id="elementSaunaSetings" style="position: absolute; top: 0px; left: 0px; height: 365px; width: 780px; "
+			align="center" >
+				<img src="Pic/Sauna/button_Yellow.png" width="780" height="365" >
+				
+				<div style="position: absolute; top: 0px; left: 100px;" >
+					<span><font style="font-size:60px" color="green">Sauna</font></span>
+				</div>
+				
+				<div style="position: absolute; top: 0px; left: 300px;" >
+					<span><font style="font-size:60px" color="green">Setings</font></span>
+				</div>
+				
+				<div style="position: absolute; top: 15px; right: 150px;" 
+				onclick="openSaunaArchive();">
+					<span style="position: absolute; top: 2px; left: 11px;" ><font size="6">Archive</font></span>
+					<img src="Pic/Sauna/button_Yellow.png" width="100" height="40" >
+				</div>
+				
+				
+				
+				
+				<div style="position: absolute; top: 100px; left: 50px;" >
+					<span>
+						<font style="font-size:30px" >Set Temperature:</font>
+					</span>
+					
+					<input id="SaunaSetTemp" type="number" size="1" 
+						style="position: absolute; top: 0px; left:218px; height: 27px; width: 35px;
+						border: 1px solid #aaabaa;" align="right" onfocus="javascript:SetFlagNewSetPoint();" 
+						onchange="javascript:inputSaunaSetTemp();" >
+					
+					<span style="position: absolute; top: 0px; left: 260px;" >
+						<font style="font-size:30px" >*C</font>
+					</span>
+				</div>
+				
+				
+				<div style="position: absolute; top: 150px; left: 50px;" >
+					<span>
+						<font style="font-size:30px" >Set Working Time:</font>
+					</span>
+					
+					<input id="SaunaWorkingHours" type="number" size="1" 
+						style="position: absolute; top: 0px; left:240px; height: 27px; width: 35px;
+						border: 1px solid #aaabaa;" align="right" onfocus="javascript:SetFlagNewSetPoint();" 
+						onchange="javascript:inputSaunaWorkingHours();" >
+					<span style="position: absolute; top: 0px; left: 280px;" >
+						<font style="font-size:30px" >:</font>
+					</span>
+					<input id="SaunaWorkingMins" type="number" size="1" 
+						style="position: absolute; top: 0px; left:295px; height: 27px; width: 35px;
+						border: 1px solid #aaabaa;" align="right" onfocus="javascript:SetFlagNewSetPoint();" 
+						onchange="javascript:inputSaunaWorkingMins();" >
+				</div>
+
+
+				
+				<div style="position: absolute; bottom: 10px; right: 10px;" 
+				onclick="closeSaunaSetings();">
+					<span style="position: absolute; top: 2px; left: 11px;" ><font size="6">Back</font></span>
+					<img src="Pic/Sauna/button_Yellow.png" width="100" height="40" >
+				</div>
+			</div>
+			
+
+			<div id="elementSaunaArchive" style="position: absolute; top: 0px; left: 0px; height: 365px; width: 780px; "
+			align="center" >
+				<img src="Pic/Sauna/button_Yellow.png" width="780" height="360" >
+				
+				<div style="position: absolute; top: 0px; left: 100px;" >
+					<span><font style="font-size:60px" color="green">Sauna</font></span>
+				</div>
+				
+				<div style="position: absolute; top: 15px; left: 320px;" 
+				onclick="openSaunaSetings();">
+					<span style="position: absolute; top: 2px; left: 11px;" ><font size="6">Setings</font></span>
+					<img src="Pic/Sauna/button_Yellow.png" width="100" height="40" >
+				</div>
+		
+				<div style="position: absolute; top: 0px; right: 130px;" >
+					<span><font style="font-size:60px" color="green">Archive</font></span>
+				</div>
+				
+				<div style="position: absolute; top: 60px; left: 15px;  width: 650px; height:280px; " >
+					<iframe src="ArchiveSteamBath.html"
+					style="width: 100%; height: 100%; border: 0px;"></iframe>
+				</div>
+
+				<div style="position: absolute; bottom: 10px; right: 10px;" 
+				onclick="closeSaunaSetings();">
+					<span style="position: absolute; top: 2px; left: 11px;" ><font size="6">Back</font></span>
+					<img src="Pic/Sauna/button_Yellow.png" width="100" height="40" >
+				</div>
+				
+
+				
+				
+			</div>
+			
+			
+			
+			
+			
+			
+	</div>
+	
+
+	
+	
+	
+	
+	
+</body>
+<script type="text/javascript" src="UIData.js"></script>
+<script type="text/javascript" src="Sauna.js"></script>
+<script type="text/javascript" src="WebSock.js"></script>
+</html>
