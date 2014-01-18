@@ -47,7 +47,7 @@ all: SivonProject
 SivonProject: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Cross G++ Linker'
-	arm-linux-gnueabihf-g++ -L"C:\Users\Lu\workspace\SivonProject\Lib" -static -o "SivonProject" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-linux-gnueabihf-g++ -L"C:\Users\Lu\git\sivon\SivonProject\Lib" -static -o "SivonProject" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
