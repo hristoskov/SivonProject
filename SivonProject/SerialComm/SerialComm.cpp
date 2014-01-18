@@ -37,11 +37,11 @@ void SerialComm::Disconnect() {
 //	close(fd);
 }
 
-void SerialComm::ReadData() {
+bool SerialComm::ReadData() {
 //	printf("%d\n", sizeof(sMapIn));
 	serialPrintf(fd, "r");
 	delay(200);
-	ReadRAW();
+	return ReadRAW();
 }
 
 
@@ -83,6 +83,14 @@ void SerialComm::SendData() {
 	{
 //		printf("%d:%d ", i, VariablesOut.Names.Analog[i]);
 	}
+	for (int i=0; i<3; i++)
+	{
+		VariablesIn.Names.Digital[i] = VariablesOut.Names.Digital[i];
+	}
+	for (int i=0; i<42; i++)
+	{
+		VariablesIn.Names.Analog[i] = VariablesOut.Names.Analog[i];
+	}
 //	printf("\n");
 //	serialPrintf(fd)
 	delay(200);
@@ -110,11 +118,12 @@ bool SerialComm::ReadRAW() {
 		CRC ^= bufferIn.u8[i];
 	}
 //	printf("%s::Red %d bytes\n", __FUNCTION__, j);
-	if ((bufferIn.u8[j-1]==CRC)&&(123==j)) {
+	if ((bufferIn.u8[j-1]==CRC)&&(143==j)) {
 		bufferIn.len = j;
 		for (int i=0; i<j; i++)
 		{
 			VariablesIn.Buffer.u8[i] = bufferIn.u8[i];
+
 		}
 		for (int i=0; i<7; i++)
 		{
@@ -160,12 +169,32 @@ SerialComm * SerialComm::getInstance() {
 	return _instance;
 }
 
+bool SerialComm::SetCommError(bool value) {
+	VariablesIn.Names.bCommError = value;
+}
+
 void* SerialComm::Run(void* ptr) {
 
+	int errCount = 0;
+	if (_instance)
 	while (true)
 	{
-		if (_instance)
-			_instance->ReadData();
+
+		if (!_instance->ReadData())
+		{
+			if (errCount > 4)
+			{
+				_instance->SetCommError(true);
+			}
+			else
+			{
+				errCount++;
+			}
+		}
+		else
+		{
+			errCount = 0;
+		}
 		delay(200);
 	}
 	return 0;

@@ -174,7 +174,8 @@ struct sMapIn {
 				unsigned short S_StopSteamBath:1;
 				unsigned short S_StartSauna:1;
 				unsigned short S_StopSauna:1;
-				unsigned short bDummy2:10;
+				unsigned short bCommError:1;
+				unsigned short bDummy2:9;
 			};
 			struct {
 				unsigned short I_AlarmCabin:1;
@@ -263,6 +264,7 @@ private:
 	void Connect();
 	void Disconnect();
 	bool ReadRAW();
+	bool SetCommError(bool value);
 protected:
 	SerialComm();
 public:
@@ -271,7 +273,7 @@ public:
 
 	static std::string uidata;
 
-	void ReadData();
+	bool ReadData();
 	void SendData();
 	void GetInputs(sVarsIn *inputs);
 	int GetData(unsigned char * const data);
